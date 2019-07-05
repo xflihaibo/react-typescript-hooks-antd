@@ -7,7 +7,7 @@
     "test": "echo \" hello world !\" ",
     "dev": "webpack  cross-env NODE_ENV=development ",
     "build": "webpack  cross-env NODE_ENV=production ",
-    "start": "webpack-dev-server  cross-env NODE_ENV=development  --hot"
+    "start": "webpack-dev-server  --hot"
   },
   "husky": {
     "hooks": {
@@ -32,6 +32,7 @@
     "cross-env": "^5.2.0",
     "fork-ts-checker-webpack-plugin": "^1.3.7",
     "history": "^4.9.0",
+    "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -51,7 +52,6 @@
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "postcss-loader": "^3.0.0",
