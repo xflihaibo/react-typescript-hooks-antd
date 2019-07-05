@@ -11,9 +11,11 @@ module.exports = {
         },
         sourceType: 'module',
     },
-    plugins: ['react', 'react-hooks', 'typescript'],
+    plugins: ['react', 'react-hooks', 'typescript','prettier'],
     root: true,
+    extends: ["prettier"],
     rules: {
+           'prettier/prettier': 'error',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
         //缩进4空格
