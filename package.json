@@ -1,0 +1,58 @@
+{
+  "name": "tsreact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \" hello world !\" ",
+    "dev": "webpack ",
+    "start": "webpack-dev-server  --hot"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm  run test"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-typescript": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.4",
+    "babel-loader": "^8.0.6",
+    "fork-ts-checker-webpack-plugin": "^1.3.7",
+    "history": "^4.9.0",
+    "husky": "^3.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.3",
+    "react-router-dom": "^5.0.1",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@hot-loader/react-dom": "16.8.6",
+    "@types/tapable": "^1.0.4",
+    "@types/webpack": "^4.4.34",
+    "antd": "^3.20.0",
+    "babel-plugin-import": "^1.12.0",
+    "css-loader": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1"
+  }
+}
