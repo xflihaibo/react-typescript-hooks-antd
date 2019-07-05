@@ -1,7 +1,7 @@
 import * as React from 'react';
 import history from '../../router/history';
-const {useState} = React;
-import {Button} from 'antd';
+const { useState } = React;
+import { Button } from 'antd';
 
 import './index.less';
 
