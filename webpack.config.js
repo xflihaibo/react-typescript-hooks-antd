@@ -62,6 +62,7 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(zh-cn|en-gb)$/),
         new ForkTsCheckerWebpackPlugin(),
         new ExtractTextPlugin('style.css'),
         new HtmlWebpackPlugin({
