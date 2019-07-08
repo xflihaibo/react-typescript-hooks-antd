@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \" hello world !\" ",
-    "dev": "webpack  cross-env NODE_ENV=development ",
-    "build": "webpack  cross-env NODE_ENV=production ",
-    "start": "webpack-dev-server  --hot",
+    "build:dev": "cross-env NODE_ENV=development webpack  ",
+    "build:test": "cross-env NODE_ENV=development webpack  --config build/webpack.dev.js ",
+    "build:prod": " cross-env NODE_ENV=production  webpack --config build/webpack.build.js ",
+    "start": " webpack-dev-server  --hot   --config build/webpack.server.js ",
     "eslint": "eslint --fix src --ext .tsx"
   },
   "husky": {
@@ -32,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^5.2.0",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
@@ -39,6 +41,7 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
     "eslint-plugin-typescript": "^0.14.0",
+    "file-loader": "^4.0.0",
     "fork-ts-checker-webpack-plugin": "^1.3.7",
     "history": "^4.9.0",
     "html-webpack-plugin": "^3.2.0",
@@ -50,9 +53,11 @@
     "react-router-dom": "^5.0.1",
     "typescript": "^3.5.2",
     "typescript-eslint-parser": "^22.0.0",
+    "uglifyjs-webpack-plugin": "^2.1.3",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "@hot-loader/react-dom": "16.8.6",
@@ -60,11 +65,13 @@
     "@types/webpack": "^4.4.34",
     "antd": "^3.20.0",
     "babel-plugin-import": "^1.12.0",
+    "compression-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1"
   }
